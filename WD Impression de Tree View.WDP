@@ -1,0 +1,143 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : WD Impression de Tree View
+ major_version : 28
+ minor_version : 0
+ type : 4097
+ description : WD Impression de Tree View
+ subtype : 0
+project :
+ identifier : 0x0
+ internal_properties : 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
+ configurations :
+  -
+    name : WD Impression de Tree View
+    internal_properties : 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
+    configuration_id : 2787977209593952030
+    type : 1
+    generation_name : WD Impression de Tree View.exe
+    version :
+     major_version : 21
+     internal_generation_version : 2
+     autoincrement_version : false
+    icon_filename : .\VST13130-32-5.ico
+    language : 1
+ elements :
+  identifier : 0x4acda46e001a119d
+  elements :
+   -
+     name : cTreeImp
+     identifier : 0x40db0641000443a1
+     internal_properties : CAAAAAgAAADSKAoerZqSTWqvfKmplT2ycMOfh0SmDNWnI19YWOg0nBj2e+M1y4zuM+3XIeEf2803Pw==
+     physical_name : .\treeimp.wdc
+     type : 4
+   -
+     name : FEN_TreeView
+     identifier : 0x40db05f8000026a7
+     internal_properties : CAAAAAgAAAD/W9fL+KUNHilyj1i4hSanScSQkBVEeYS2sQo7HOQuohbqafUm2p2BhrAqlh7SriLqag==
+     physical_name : .\FEN_TreeView.wdw
+     type : 2
+   -
+     name : TEST_TreeView
+     identifier : 0x457ec01000355ec8
+     internal_properties : CAAAAAgAAADkYszo14ykRx0AviLZiR8/nN8rsw8bLD6l4CSqo3yYoBySFshoUHC0QufRL/fpkQfxcQ==
+     physical_name : .\TEST_TreeView.wxt
+     type : 17
+  other_elements :
+   -
+     physical_name : .\description.rtf
+   -
+     physical_name : .\description.gif
+   -
+     physical_name : .\Images\accordeon.gif
+   -
+     physical_name : .\Images\ampli.gif
+   -
+     physical_name : .\Images\casque.gif
+   -
+     physical_name : .\Images\clarinette.gif
+   -
+     physical_name : .\Images\clavier.gif
+   -
+     physical_name : .\Images\cochefaux.gif
+   -
+     physical_name : .\Images\cochevrai.gif
+   -
+     physical_name : .\Images\corde.gif
+   -
+     physical_name : .\Images\etui.gif
+   -
+     physical_name : .\Images\guitare.gif
+   -
+     physical_name : .\Images\note.gif
+   -
+     physical_name : .\Images\outils.gif
+   -
+     physical_name : .\Images\percu.gif
+   -
+     physical_name : .\Images\piano.gif
+   -
+     physical_name : .\Images\pupitre.gif
+   -
+     physical_name : .\Images\rond.gif
+   -
+     physical_name : .\Images\rondcreux.gif
+   -
+     physical_name : .\Images\saxophone.gif
+   -
+     physical_name : .\Images\tabouret.gif
+  analysis : .\WD Impression de Tree View.ana\WD Impression de Tree View.wda
+  net_assemblies : []
+  uwp_api : []
+  external_components : []
+  internal_components : []
+ report_and_queries_enabled : false
+ common_generation_directory : true
+ languages :
+  - fr-FR
+ code_elements :
+  internal_properties : CAAAAAgAAABkqTT++iWv7td7jvYMYvcPVpyiNSiHe7HzXmPG2wCnQLKjYq/sQZFUBs2R10CFh7XOcB3Ftv9anqcpk+hN0s+G2KrN3myjFs6pUpFs7/wQhUiZ4ntJzRt8bGBZN24L40I2z5R/6iv4FgL+Wko2rfnS9ZtzVrYwbPdxp0/vgw2lk6AmxwNvwnp6BpUQmt/I
+  type_code : 0
+  p_codes :
+   -
+     code : |1-
+      
+     type : 196608
+   -
+     code : |1-
+      
+     type : 196610
+   -
+     code : |1-
+      
+     type : 196619
+   -
+     type : 196621
+   -
+     type : 196627
+     enabled : false
+  orphans :
+   -
+     name : WD Impression de Tree View
+     identifier : 0x4acda46e00241342
+     code_elements :
+      type_code : 159
+      p_codes : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+rad :
+ internal_properties : CAAAAAgAAABhIL0UXeZmxDJxY3Xy0Q==
+project_explorer :
+ explorer_type : project
+resources :
+ string_res :
+  identifier : 0x0
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+  strings :
+   -
+     text :
+      fr-FR : \treeview.ini
+     index : 0
+custom_note :
+ internal_properties : CAAAAAgAAAAd98VSJfHHqE3P0QHwrwdhn7ig8dWBR6valpUTgnAMTVXiDg==

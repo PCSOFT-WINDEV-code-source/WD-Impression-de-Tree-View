@@ -1,0 +1,567 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : cTreeImp
+ major_version : 28
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x14a4f0d201aeb2c9
+ internal_properties : CAAAAAgAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  internal_properties : CAAAAAgAAABpycnK9E0Svlo873hYoBM99bfmTzbl/4uMhmws//NLigsVEWtJIpGWW8tC31NbidS5g70HIn4DHYtJfrKKPURP/RysmnvncB5pAgwgDXCsEi55Ahn1KLPDt2G0+RMHOcD0YUN74d1sZsNvRXn47si4HMesc5NnbIwMHT9P0kLpcq56+np2MHogt+drTZbBeXHqAadkG0qEe29k4flkLmyotVgAfZUM
+  type_code : 10
+  p_codes :
+   -
+     code : |1+
+      cTreeImp est une Classe
+      	
+      	// Tableau pour l'impression des décalages
+      	m_tabArbre est un tableau fixe de 8000 entiers
+      	
+      	// Champ Arbre
+      	m_Arbre est un champ
+      	
+      	// Informations sur la police de caractère
+      	m_nNoPolice est un entier
+      	m_sNomPolice est une chaine
+      	m_nHauteurPolice est un entier
+      	m_nAttributsPolice est un entier
+      	m_nMargePolice est un entier
+      	m_nPageEnCours est un entier
+      	
+      	// Informations sur la ligne à imprimer en mm
+      	m_nHauteurLigne est un entier
+      	
+      	// Largeur d'un niveau à imprimer en mm
+      	m_nLargeurNiveau est un entier
+      	
+      	// Position courante dans la page en mm
+      	m_nPosCourante est un entier
+      	m_nPosPrecedente est un entier
+      	
+      	// Position de départ en mm sur une page
+      	m_nPosDepart est un entier
+      	
+      	// Position de fin en mm sur une page
+      	m_nPosFin est un entier
+      	
+      	// Marge droite en mm
+      	m_nMargeDroite est un entier
+      	
+      	// Couleur magenta transparente
+      	m_bMagentaTransparent est un booleen
+      	m_nCouleurCadreHautFinDocument est un entier
+      	
+      Fin
+      
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1487578561701196489
+     type_code : 27
+     code : |1+
+      Procédure constructeur(LOCAL ChampArbre est un champ, LOCAL nCouleurCadre est un entier)
+      
+      //Paramètres : 
+      //- ChampArbre : Champ arbre à manipuler
+      //- CouleurCadre : Couleur du cadre haut et bas de document lors de l'impression.
+      
+      :Initialisation(ChampArbre, nCouleurCadre)
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1487578561701262025
+     type_code : 28
+     type : 655360
+   -
+     name : ChHauteurLigne
+     procedure_id : 1487578561701327561
+     type_code : 12
+     code : |1+
+      Procédure TreeImp::ChHauteurLigne()
+      
+      // Calcule la hauteur d'une ligne en fonction de la police choisie
+      :m_nHauteurLigne = ihauteurtexte(ipolice(:m_nNoPolice) + "X") + (2 * :m_nMargePolice)
+     type : 458752
+   -
+     name : ChLargeurNiveau
+     procedure_id : 1487578561701393097
+     type_code : 12
+     code : |1+
+      Procédure TreeImp::ChLargeurNiveau(LOCAL nLargeurNiveau est un entier)
+      
+      :m_nLargeurNiveau = nLargeurNiveau
+     type : 458752
+   -
+     name : ChMagentaTransp
+     procedure_id : 1487578561701458633
+     type_code : 12
+     code : |1+
+      Procédure TreeImp::ChMagentaTransp(LOCAL bMagentaTransparent est un booleen)
+      
+      :m_bMagentaTransparent = bMagentaTransparent
+     type : 458752
+   -
+     name : ChMargeDroite
+     procedure_id : 1487578561701524169
+     type_code : 12
+     code : |1+
+      Procédure TreeImp::ChMargeDroite(LOCAL nMargeDroite est un entier)
+      
+      :m_nMargeDroite = nMargeDroite
+     type : 458752
+   -
+     name : ChPolice
+     procedure_id : 1487578561701589705
+     type_code : 12
+     code : |1+
+      procedure TreeImp::ChPolice(LOCAL nNum est un entier, LOCAL sNom est une chaine, LOCAL nTaillePolice est un entier, LOCAL nAttributs est un entier)
+      	
+      :m_nNoPolice = nNum
+      :m_sNomPolice = sNom
+      :m_nHauteurPolice = nTaillePolice
+      :m_nAttributsPolice = nAttributs
+     type : 458752
+   -
+     name : ChPosDepart
+     procedure_id : 1487578561701655241
+     type_code : 12
+     code : |1+
+      Procédure TreeImp::ChPosDepart(LOCAL nPosDepart est un entier)
+      
+      :m_nPosDepart = nPosDepart
+     type : 458752
+   -
+     name : ChPosFin
+     procedure_id : 1487578561701720777
+     type_code : 12
+     code : |1+
+      Procédure TreeImp::ChPosFin(LOCAL nPosFin est un entier)
+      
+      :m_nPosFin = nPosFin
+     type : 458752
+   -
+     name : Imprime
+     internal_properties : CAAAAAgAAACiiUE+c1OGS1+b8V7PK8noTEF3zdD0ucuxwro/LkDguQHfhw5D1JE9Kzh7g/hJrVLomzOQPd1GUsD7T1VJmBOFK6vkLGikpKA23CS5TLdr8ham0fJBakeN1ba8ERQT9Rj5CU8VpDwoADSKrcKxFg==
+     procedure_id : 1487578561701786313
+     type_code : 12
+     code : |1+
+      Procédure TreeImp::Imprime()
+      
+      // Initialise la page en cours
+      :m_nPageEnCours = inumpage()
+      
+      // Création de la police de caractère 
+      icreepolice(:m_nNoPolice, :m_nHauteurPolice, :m_nAttributsPolice, :m_sNomPolice)
+      
+      // Calcul de la hauteur d'une ligne
+      :ChHauteurLigne()
+      
+      // Position courante
+      :m_nPosCourante = iPosY() + :m_nPosDepart
+      :m_nPosPrecedente = :m_nPosCourante
+      
+      // Liste les fils du treeview à partir de la racine pour l'imprimer
+      arbrelistefils(:m_Arbre, null, :ImprimeTreeView)
+     type : 458752
+   -
+     name : ImprimeElement
+     procedure_id : 1487578561701851849
+     type_code : 12
+     code : |1+
+      Procédure TreeImp::ImprimeElement(LOCAL sElement est une chaine, LOCAL nNiveau est un entier, LOCAL nIdentifiant est un entier)
+      
+      nDécalage est un entier = 0
+      
+      // Vérifie si saut de page
+      // en cas de nouvelle page, on change la position courante
+      :VerifiePosCourant()
+      		
+      // Impression de l'image
+      si :ImprimeImage(nIdentifiant, nNiveau)=vrai alors
+      	nDécalage = :m_nHauteurLigne
+      fin
+      
+      iimprime( ipolice(:m_nNoPolice) + iPosY(:m_nPosCourante+:m_nMargePolice) +...
+      iPosX(:m_nMargeDroite + (nNiveau*:m_nLargeurNiveau) + nDécalage) + sElement)
+      
+      :m_nPosPrecedente = :m_nPosCourante + :m_nHauteurLigne
+      :m_nPosCourante += (:m_nHauteurLigne*partieentiere((iPosY()-(:m_nPosCourante+:m_nMargePolice))/:m_nHauteurLigne))
+      
+     type : 458752
+   -
+     name : ImprimeImage
+     procedure_id : 1487578561701917385
+     type_code : 12
+     code : |1+
+      fonction TreeImp::ImprimeImage(LOCAL sFichier est une chaine, LOCAL nNiveau est un entier)
+      // Renvoie vrai si une image est imprimé
+      
+      // Vérification de la validité du fichier image
+      si extraitchaine(infobitmap(sFichier), 1)<> "BAD" alors
+      	
+      	// Si la couleur magenta doit être transparente
+      	si :m_bMagentaTransparent = vrai alors imagentatransparent(vrai)
+      	
+      	// Impression de l'image
+      	iimprimeimage(sFichier,
+      	:m_nMargeDroite + (nNiveau*:m_nLargeurNiveau), :m_nPosCourante,
+      	:m_nMargeDroite + (nNiveau*:m_nLargeurNiveau) + :m_nHauteurLigne,
+      	:m_nPosCourante+:m_nHauteurLigne)
+      	
+      	imagentatransparent(faux)
+      	
+      	renvoyer vrai
+      	
+      fin
+      
+      renvoyer faux
+     type : 458752
+   -
+     name : ImprimeTrait
+     procedure_id : 1487578561701982921
+     type_code : 12
+     code : |1+
+      Procédure TreeImp::ImprimeTrait(LOCAL nL1 est un entier, LOCAL nC1 est un entier, LOCAL nL2 est un entier, LOCAL nC2 est un entier)
+      
+      rLigne2, rColonne2 sont des reels  
+      
+      // Vérifie si saut de page
+      // en cas de nouvelle page, on change la position courante
+      :VerifiePosCourant()
+      
+      si nL2 > ihauteurpage() alors
+      	rLigne2 = ihauteurpage()
+      sinon
+      	rLigne2 = nL2
+      FIN
+      
+      si nC2 > ilargeurpage() alors
+      	rColonne2 = ihauteurpage()
+      sinon
+      	rColonne2 = nC2
+      FIN	
+      
+      iTrait(nC1, nL1, rColonne2, rLigne2, 1, inoir, 1)
+     type : 458752
+   -
+     name : ImprimeTreeview
+     internal_properties : CAAAAAgAAADasZly83MaSy8rcd7vCyl4zFGnPbBkiTvxQmoPvrDwmbH/J46TVNE9e4i7oxgpLWJIS+MAPc1WmujDB62xUJsdczOshKBsDMgexBzxlC+zql6uOWrZkq91Xf70aZyrfRDBUTft3OQwjKBGVRrJ7g==
+     procedure_id : 1487578561702048457
+     type_code : 12
+     code : |1+
+      Procédure prive TreeImp::ImprimeTreeView(LOCAL sNomTV est une chaine <utile>, LOCAL sChemin est une chaine, LOCAL sElement est une chaine, LOCAL nNiveau est un entier, LOCAL nPointeur est un entier <utile>)
+      
+      Identifiant est une chaine // Contient l'identifiant du niveau en cours (si l'identifiant contient une image elle est imprimée)
+      nBorne est un entier
+      
+      // Cette procédure est appelée par la fonction ArbreListeFils() pour chaque élément du treeview.
+      
+      // On stocke le nombre de fils de l'élément en cours
+      :m_tabArbre[nNiveau] = arbreoccurrence(:m_Arbre, sChemin+sElement, aunniveau)
+      
+      // Si on n'est pas à la racine, on décrémente le nombre de fils du père
+      // Niveau est le niveau du fils, (Niveau-1) celui du père
+      si nNiveau <> 1 alors
+      	:m_tabArbre[nNiveau-1]--
+      FIN
+      
+      // Récupération de l'identifiant
+      Identifiant = arbrerecupereidentifiant(:m_Arbre, sChemin+sElement)
+      
+      // Impression du niveau
+      si nNiveau > 1 alors
+      	nBorne = (nNiveau - 1)
+      	pour i = 1 à nBorne
+      		
+      		// Vérifie si saut de page
+      		// en cas de nouvelle page, on change la position courante
+      		:VerifiePosCourant()
+      		
+      		// impression du trait pour le niveau en cours
+      		si (i = (nNiveau - 1) ) alors
+      			
+      			selon :m_tabArbre[i]
+      			
+      				cas 0: // c'est le dernier fils, on imprime un retour
+      					:TraitRetour(i, sElement, Identifiant)
+      					
+      				autre cas: // il y a encore des fils donc on imprime un croisement
+      					:TraitCroisement(i, sElement, Identifiant)
+      					
+      			FIN
+      			
+      		sinon
+      			
+      			// Impression du trait pour un niveau quelconque
+      			selon :m_tabArbre[i]
+      			
+      				cas 0: // plus de fils pour ce niveau donc aucun trait à imprimer
+      					
+      				autre cas: // il existe encore des fils donc on imprime un trait vertical
+      					:TraitVertical(i)
+      					
+      			FIN
+      			
+      		FIN
+      		
+      	FIN
+      	
+      sinon
+      	// Cas particulier pour la racine 
+      	:ImprimeElement(sElement, 0, Identifiant)
+      fin
+      
+      // Augmente la position courante d'une hauteur de ligne
+      :m_nPosCourante += :m_nHauteurLigne
+      // Si on dépasse le cadre d'impression, saute une page
+      si :m_nPosCourante > :m_nPosFin alors
+      	isautepage
+      	:m_nPosCourante = :m_nPosDepart
+      FIN
+     type : 458752
+   -
+     name : Initialisation
+     internal_properties : CAAAAAgAAADEZd6FE7NaO2+zKbZXC6l43HE/lehsmbNp0gof3kgY8cn3536z1GltyzBjSyBZvcLo+xvoVSXmhuTfuxltVN9RB4c4QGygUMQa8DD9UGOHfrICBYY1RnNBCXr41QhfwVSF1cOJuMjksIS64tbX8A==
+     procedure_id : 1487578561702113993
+     type_code : 12
+     code : |1+
+      Procédure TreeImp::Initialisation(LOCAL ChampArbre est un champ, LOCAL nCouleurCadre est un entier)
+      //Paramètres : 
+      //- ChampArbre : champ Arbre à manipuler
+      //- CouleurCadre : Couleur du cadre haut et bas de document lors de l'impression.
+      
+      :m_Arbre <- ChampArbre
+      
+      // Valeur par défaut pour la police
+      :m_nNoPolice = 999
+      :m_sNomPolice = "Arial"
+      :m_nHauteurPolice = 10 
+      :m_nAttributsPolice = inormal
+      :m_nMargePolice = 1
+      
+      // Zone d'impression
+      :m_nPosDepart = 20
+      :m_nPosFin = ihauteurpage()
+      :m_nMargeDroite = 20
+      
+      // Niveau
+      :m_nLargeurNiveau = 10
+      
+      // Couleur magenta transparente
+      :m_bMagentaTransparent = vrai
+      
+      // Couleur du cadre
+      :m_nCouleurCadreHautFinDocument = nCouleurCadre
+     type : 458752
+   -
+     name : RecupLargeurNiveau
+     procedure_id : 1487578561702179529
+     type_code : 12
+     code : |1-
+      Procédure TreeImp::RecupLargeurNiveau()
+      
+      renvoyer :m_nLargeurNiveau
+     type : 458752
+   -
+     name : RecupMagentaTransp
+     procedure_id : 1487578561702245065
+     type_code : 12
+     code : |1-
+      Procédure TreeImp::RecupMagentaTransp()
+      
+      renvoyer :m_bMagentaTransparent
+     type : 458752
+   -
+     name : RecupMargeDroite
+     procedure_id : 1487578561702310601
+     type_code : 12
+     code : |1-
+      Procédure TreeImp::RecupMargeDroite()
+      
+      renvoyer :m_nMargeDroite
+     type : 458752
+   -
+     name : RecupPolice
+     procedure_id : 1487578561702376137
+     type_code : 12
+     code : |1-
+      procedure TreeImp::RecupPolice()
+      
+      renvoyer :m_sNomPolice +tab+ :m_nHauteurPolice +tab+ :m_nAttributsPolice
+     type : 458752
+   -
+     name : RecupPosDepart
+     procedure_id : 1487578561702441673
+     type_code : 12
+     code : |1-
+      Procédure TreeImp::RecupPosDepart()
+      
+      renvoyer :m_nPosDepart
+     type : 458752
+   -
+     name : RecupPosFin
+     procedure_id : 1487578561702507209
+     type_code : 12
+     code : |1-
+      Procédure TreeImp::RecupPosFin()
+      
+      renvoyer :m_nPosFin
+     type : 458752
+   -
+     name : TraitCroisement
+     procedure_id : 1487578561702572745
+     type_code : 12
+     code : |1-
+      Procédure TreeImp::TraitCroisement(LOCAL nNiveau est un entier, LOCAL sElement est une chaine, LOCAL nIdentifiant est un entier)
+      
+      // Imprime |
+      //:PosCourante
+      :ImprimeTrait(...
+      :m_nPosPrecedente,
+      :m_nMargeDroite + ((nNiveau-1)*:m_nLargeurNiveau) + (:m_nLargeurNiveau/2),
+      :m_nPosCourante + :m_nHauteurLigne,
+      :m_nMargeDroite + ((nNiveau-1)*:m_nLargeurNiveau) + (:m_nLargeurNiveau/2))
+      
+      // Imprime le retour
+      //:PosCourante
+      :ImprimeTrait(...
+      :m_nPosCourante + (:m_nHauteurLigne/2),
+      :m_nMargeDroite + ((nNiveau-1)*:m_nLargeurNiveau) + (:m_nLargeurNiveau/2),
+      :m_nPosCourante + (:m_nHauteurLigne/2),
+      :m_nMargeDroite + ((nNiveau-1)*:m_nLargeurNiveau) + (:m_nLargeurNiveau/2) + (:m_nLargeurNiveau/4))
+      
+      // Imprime le nom de l'élément
+      :ImprimeElement(sElement, nNiveau, nIdentifiant)
+     type : 458752
+   -
+     name : TraitRetour
+     procedure_id : 1487578561702638281
+     type_code : 12
+     code : |1+
+      Procédure TreeImp::TraitRetour(LOCAL nNiveau est un entier, LOCAL sElement est une chaine, LOCAL nIdentifiant est un entier)
+      
+      // Imprime |
+      // :PosCourante
+      :ImprimeTrait(...
+      :m_nPosPrecedente,
+      :m_nMargeDroite + ((nNiveau-1)*:m_nLargeurNiveau) + (:m_nLargeurNiveau/2),
+      :m_nPosCourante +  (:m_nHauteurLigne/2),
+      :m_nMargeDroite + ((nNiveau-1)*:m_nLargeurNiveau) + (:m_nLargeurNiveau/2))
+      
+      // Imprime le retour
+      // :PosCourante
+      :ImprimeTrait(...
+      :m_nPosPrecedente + (:m_nHauteurLigne/2),
+      :m_nMargeDroite + ((nNiveau-1)*:m_nLargeurNiveau) + (:m_nLargeurNiveau/2),
+      :m_nPosPrecedente + (:m_nHauteurLigne/2),
+      :m_nMargeDroite + ((nNiveau-1)*:m_nLargeurNiveau) + (:m_nLargeurNiveau/2) + (:m_nLargeurNiveau/4))
+      
+      // Imprime le nom de l'élément
+      :ImprimeElement(sElement, nNiveau, nIdentifiant)
+     type : 458752
+   -
+     name : TraitVertical
+     procedure_id : 1487578561702703817
+     type_code : 12
+     code : |1+
+      Procédure TreeImp::TraitVertical(LOCAL nNiveau est un entier)
+      
+      // Vérifie si saut de page
+      // en cas de nouvelle page, on change la position courante
+      :VerifiePosCourant()
+      
+      // Imprime |
+      :ImprimeTrait(...
+      :m_nPosCourante,
+      :m_nMargeDroite + ((nNiveau-1)*:m_nLargeurNiveau) + (:m_nLargeurNiveau/2),
+      :m_nPosCourante + :m_nHauteurLigne,
+      :m_nMargeDroite + ((nNiveau-1)*:m_nLargeurNiveau) + (:m_nLargeurNiveau/2))
+     type : 458752
+   -
+     name : VerifiePosCourant
+     procedure_id : 1487578561702769353
+     type_code : 12
+     code : |1+
+      Procédure TreeImp::VerifiePosCourant()
+      
+      // Vérifie si saut de page
+      // en cas de nouvelle page, on change la position courante
+      
+      // Hauteur suffisante pour imprimer le prochaine niveau ?
+      si :m_nHauteurLigne + iPosY() > ihauteurpage() alors
+      	isautepage()
+      FIN
+      		
+      si :m_nPageEnCours <> inumpage() alors
+      	:m_nPageEnCours = inumpage()
+      	:m_nPosCourante = :m_nPosDepart
+      	:m_nPosPrecedente = :m_nPosDepart
+      fin
+     type : 458752
+   -
+     name : ImprimeTitre
+     internal_properties : CAAAAAgAAAClDdKD0rmz+vCBzrBRwFrGhZm2Iwlw4tDBOkUJJPpeqBS51HwVoOslfEsuqwz9yljCof5zpXXHVofy0Sx/FQG8rUytcfo2Ev98QEt7HMrGMJOORWTMY41WaGbi+2jEQIIQj0EVFUq8WSZNy/3EWINj1UTJC3so6nLbMTwV2+gS
+     procedure_id : 1487578561702834889
+     type_code : 12
+     code : |1+
+      Procédure ImprimeTitre(LOCAL sTitre1 est une chaine = "", LOCAL sTitre2 est une chaine = "")
+      // Impression du titre du document
+      
+      // Création de polices 
+      icreepolice(1, 20, igras, "Arial", iblanc)
+      icreepolice(2, 20, igras, "Arial", iJauneBulle)
+      
+      // Impression d'un cadre en haut du document
+      iCadre(0, 17, iLargeurPage(), 17+15, 1, 100, :m_nCouleurCadreHautFinDocument)
+      
+      iPosY(20)
+      iImprimeMot(iPolice(2) + iPosX(20) + sTitre1)
+      iImprimeMot(iPolice(1) + iposX(70) + sTitre2)
+     type : 458752
+   -
+     name : iImprimeFinDocument
+     procedure_id : 1487578561702900425
+     type_code : 12
+     code : |1-
+      // Syntaxe :
+      //iImprimeFinDocument ()
+      //Impression d'une fin de document 
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      
+      Procédure iImprimeFinDocument()
+      
+      iPosY(iPosY() + 10)
+      iCadre(0, iPosY(), iLargeurPage(), iPosY()+10, 1, 100, :m_nCouleurCadreHautFinDocument)
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : TreeImp
+resources :
+ string_res :
+  identifier : 0x40b6f7c235d6ff98
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+  strings :
+   -
+     text :
+      fr-FR : Arial
+     index : 0
+   -
+     text :
+      fr-FR : X
+     index : 1
+   -
+     text :
+      fr-FR : BAD
+     index : 2
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ
